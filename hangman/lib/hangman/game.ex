@@ -11,7 +11,6 @@ defmodule Hangman.Game do
       letters: word |> String.codepoints
     }
   end
-
   def new_game() do
     Dictionary.random_word()
     |> new_game()
@@ -32,7 +31,7 @@ defmodule Hangman.Game do
       game_state: game.game_state,
       turns_left: game.turns_left,
       letters: game.letters |> reveal_guessed(game.used),
-      letters_guessed: game.used,
+      letters_guessed: game.used |> MapSet.to_list,
     }
   end
 
