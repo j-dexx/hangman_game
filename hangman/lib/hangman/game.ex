@@ -11,6 +11,7 @@ defmodule Hangman.Game do
       letters: word |> String.codepoints
     }
   end
+
   def new_game() do
     Dictionary.random_word()
     |> new_game()
