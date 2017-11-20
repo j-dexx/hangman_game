@@ -1,5 +1,0 @@
-<div class="jumbotron">
-  <%= plural_of("egg", 1) %>
-  <%= plural_of("egg", 2) %>
-  <%= plural_of("egg", -2) %>
-</div>
